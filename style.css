@@ -1,0 +1,243 @@
+/* -----------------------
+   Global Styles
+----------------------- */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #0B0B0F 0%, #14141c 100%);
+  color: #FFFFFF;
+}
+
+a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+h1, h2, h3 {
+  font-family: Impact, sans-serif;
+  color: #FFFFFF;
+  letter-spacing: 1px;
+  text-shadow: 0 0 8px rgba(157, 0, 255, 0.7);
+}
+
+/* -----------------------
+   Navigation
+----------------------- */
+.main-nav {
+  background-color: #05050A;
+  padding: 15px 0;
+  text-align: center;
+  border-bottom: 1px solid #9D00FF;
+}
+
+.main-nav a {
+  margin: 0 18px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.main-nav a:hover {
+  color: #9D00FF;
+}
+
+/* -----------------------
+   Hero Section
+----------------------- */
+header.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background-color: #0B0B0F;
+  background-image: url('../images/fog-overlay.png');
+  background-size: cover;
+  background-position: center;
+}
+
+header.hero img.logo {
+  width: 220px;
+  margin-bottom: 25px;
+}
+
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { opacity: 1; }
+  20%, 24%, 55% { opacity: 0.4; }
+}
+
+header.hero h1 {
+  font-size: 3.2em;
+  margin-bottom: 10px;
+  animation: flicker 2s infinite;
+}
+
+header.hero p {
+  font-size: 1.2em;
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+  color: #dcdcdc;
+  text-shadow: 0 0 4px #9D00FF, 0 0 8px #FF2D95;
+}
+
+/* -----------------------
+   Buttons
+----------------------- */
+.btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 14px 28px;
+  background-color: #9D00FF;
+  color: #FFFFFF;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 8px #9D00FF;
+}
+
+.btn:hover {
+  background-color: #FF2D95;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #FF2D95, 0 0 30px #FF2D95, 0 0 45px #FF2D95;
+}
+
+/* -----------------------
+   Sections
+----------------------- */
+section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 2.2em;
+  margin-bottom: 25px;
+}
+
+/* -----------------------
+   Video Grids
+----------------------- */
+.video-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.video-grid iframe,
+.video-grid a img {
+  max-width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-grid iframe:hover,
+.video-grid a img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px #9D00FF, 0 0 25px #FF2D95;
+}
+
+/* -----------------------
+   Blog (FIXED CENTERING)
+----------------------- */
+.blog-section {
+  max-width: 800px;
+  margin: 0 auto;          /* ✅ centers the whole section */
+  padding: 20px;
+}
+
+.blog-post {
+  background-color: #111;
+  border: 1px solid #9D00FF;
+  padding: 30px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  text-align: left;        /* ✅ better readability */
+  transition: 0.3s ease;
+}
+
+.blog-post:hover {
+  box-shadow: 0 0 15px #9D00FF, 0 0 25px #FF2D95;
+  transform: translateY(-3px);
+}
+
+/* -----------------------
+   Guest Grid
+----------------------- */
+.guest-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.guest-card {
+  background-color: #111;
+  border: 1px solid #9D00FF;
+  padding: 25px;
+  width: 240px;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.guest-card:hover {
+  transform: translateY(-5px);
+  border-color: #FF2D95;
+  box-shadow: 0 0 15px #FF2D95, 0 0 25px #FF2D95;
+}
+
+/* -----------------------
+   Merch
+----------------------- */
+.merch-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.merch-item {
+  background-color: #111;
+  border: 1px solid #9D00FF;
+  padding: 25px;
+  width: 260px;
+  border-radius: 10px;
+}
+
+/* -----------------------
+   Contact
+----------------------- */
+.contact-section {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* -----------------------
+   Footer
+----------------------- */
+footer {
+  background-color: #05050A;
+  padding: 50px 20px;
+  text-align: center;
+  font-size: 0.9em;
+  color: #aaa;
+  border-top: 1px solid #9D00FF;
+}
+
+footer a {
+  margin: 0 8px;
+}
+
+/* -----------------------
+   Responsive
+----------------------- */
+@media (max-width: 768px) {
+  .video-grid, .guest-grid, .merch-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .guest-card, .merch-item {
+    width: 90%;
+  }
+
+  header.hero h1 {
+    font-size: 2.2em;
+  }
+}
