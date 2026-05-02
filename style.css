@@ -1,6 +1,7 @@
 /* -----------------------
    Global Styles
 ----------------------- */
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -23,6 +24,7 @@ h1, h2, h3 {
 /* -----------------------
    Navigation
 ----------------------- */
+
 .main-nav {
   background-color: #05050A;
   padding: 15px 0;
@@ -43,6 +45,7 @@ h1, h2, h3 {
 /* -----------------------
    Hero Section
 ----------------------- */
+
 header.hero {
   text-align: center;
   padding: 100px 20px;
@@ -79,6 +82,7 @@ header.hero p {
 /* -----------------------
    Buttons
 ----------------------- */
+
 .btn {
   display: inline-block;
   margin: 10px;
@@ -100,6 +104,7 @@ header.hero p {
 /* -----------------------
    Sections
 ----------------------- */
+
 section {
   padding: 80px 20px;
   text-align: center;
@@ -113,6 +118,7 @@ section h2 {
 /* -----------------------
    Video Grids
 ----------------------- */
+
 .video-grid {
   display: flex;
   flex-wrap: wrap;
@@ -134,11 +140,12 @@ section h2 {
 }
 
 /* -----------------------
-   Blog (FIXED CENTERING)
+   Blog
 ----------------------- */
+
 .blog-section {
   max-width: 800px;
-  margin: 0 auto;          /* ✅ centers the whole section */
+  margin: 0 auto;
   padding: 20px;
 }
 
@@ -148,7 +155,7 @@ section h2 {
   padding: 30px;
   margin-bottom: 30px;
   border-radius: 10px;
-  text-align: left;        /* ✅ better readability */
+  text-align: left;
   transition: 0.3s ease;
 }
 
@@ -160,6 +167,7 @@ section h2 {
 /* -----------------------
    Guest Grid
 ----------------------- */
+
 .guest-grid {
   display: flex;
   flex-wrap: wrap;
@@ -185,6 +193,7 @@ section h2 {
 /* -----------------------
    Merch
 ----------------------- */
+
 .merch-grid {
   display: flex;
   flex-wrap: wrap;
@@ -203,14 +212,18 @@ section h2 {
 /* -----------------------
    Contact
 ----------------------- */
+
 .contact-section {
-  max-width: 600px;
-  margin: 0 auto;
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 20px;
+  text-align: center;
 }
 
 /* -----------------------
    Footer
 ----------------------- */
+
 footer {
   background-color: #05050A;
   padding: 50px 20px;
@@ -225,19 +238,153 @@ footer a {
 }
 
 /* -----------------------
+   Signal Footer
+----------------------- */
+
+.signal-footer {
+  background-color: #05050A;
+  padding: 60px 20px;
+  text-align: center;
+  border-top: 1px solid #9D00FF;
+  box-shadow: 0 -10px 40px rgba(157, 0, 255, 0.2);
+}
+
+.signal-footer a {
+  color: #9D00FF;
+  transition: 0.3s;
+}
+
+.signal-footer a:hover {
+  color: #FF2D95;
+  text-shadow: 0 0 10px #FF2D95;
+}
+
+/* -----------------------
+   Tape Archive
+----------------------- */
+
+.tape-list {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.tape-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #9D00FF;
+  background: #111;
+  transition: 0.3s ease;
+}
+
+.tape-row:hover {
+  transform: translateX(10px);
+  border-color: #FF2D95;
+  box-shadow: -5px 0 20px #FF2D95;
+}
+
+.tape-id {
+  color: #FF2D95;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+}
+
+.tape-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/* -----------------------
+   File Blocks (Contact system)
+----------------------- */
+
+.file-block {
+  background: #111;
+  border: 1px solid #9D00FF;
+  padding: 25px;
+  margin: 20px 0;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.file-block:hover {
+  border-color: #FF2D95;
+  box-shadow: 0 0 20px #FF2D95;
+  transform: scale(1.01);
+}
+
+/* -----------------------
+   Social Links
+----------------------- */
+
+.social-links a {
+  color: #9D00FF;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  color: #FF2D95;
+}
+
+/* -----------------------
    Responsive
 ----------------------- */
+
 @media (max-width: 768px) {
-  .video-grid, .guest-grid, .merch-grid {
+  .video-grid,
+  .guest-grid,
+  .merch-grid {
     flex-direction: column;
     align-items: center;
   }
 
-  .guest-card, .merch-item {
+  .guest-card,
+  .merch-item {
     width: 90%;
   }
 
   header.hero h1 {
     font-size: 2.2em;
   }
+}
+.signal-hub {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.hub-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 40px auto;
+}
+
+.hub-card {
+  display: block;
+  padding: 25px;
+  border: 1px solid #9D00FF;
+  background-color: #111;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.hub-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  border-color: #FF2D95;
+  box-shadow: 0 0 20px #FF2D95;
+}
+
+.hub-card h3 {
+  margin-bottom: 10px;
+}
+
+.youtube-cta {
+  text-align: center;
+  padding: 80px 20px;
 }
